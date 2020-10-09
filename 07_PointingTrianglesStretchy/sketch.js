@@ -58,15 +58,15 @@ function draw() {
       line(posX, posY, mouse.X, mouse.Y);
 
       f = map(m, 0, 500, 0, 2)
-      
+
       push();
-      fill(255,50,40);
+      fill(255, 50, 40);
       translate(posX, posY)
       rotate(mouse.heading());
       let arrowSize = 40;
 
       //triangle(posX, posY + arrowSize, posX, posY - arrowSize, posX + arrowSize * 2, posY);
-      triangle(-20, 0 + arrowSize/(f +0.7), -20, 0 - arrowSize/(f +0.7), 0 + arrowSize * f, 0);
+      triangle(-20, 0 + arrowSize / (f + 0.7), -20, 0 - arrowSize / (f + 0.7), 0 + arrowSize * f, 0);
       pop();
 
 

@@ -51,7 +51,7 @@ function draw() {
       let posX = width / tileCount * gridX;
       let posY = width / tileCount * gridY;
 
-    
+
       //strokeWeight(2);
       push()
       stroke(0)
@@ -100,7 +100,7 @@ function draw() {
           fill(random(colors))
           quad(g / 2, g / 2, g / 2, q - g / 2, q - g / 2, q - g / 2, q - g / 2, g / 2)
           break;
-          case 10:
+        case 10:
           fill(random(colors))
           quad(-(width / tileCount), -(width / tileCount), -(width / tileCount), width / tileCount, width / tileCount, width / tileCount, width / tileCount, -(width / tileCount));
           break;

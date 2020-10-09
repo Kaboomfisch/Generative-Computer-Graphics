@@ -32,30 +32,30 @@ function draw() {
   background(backgroundGrey);
   strokeWeight(1);
   noStroke();
-  fill(255,100);
+  fill(255, 100);
   noFill();
   smooth();
 
-  noiseDetail(octaves,falloff);
+  noiseDetail(octaves, falloff);
 
   noiseXRange = 100;
   noiseYRange = 100;
   c1 -= 1;
-  c =1;
+  c = 1;
   console.log(c1)
-  let t = millis()/10000;
-  for(var y = 0; y < height; y++) {    
+  let t = millis() / 10000;
+  for (var y = 0; y < height; y++) {
     beginShape();
     c += 0.1
-    stroke(100,100,255);
-    for(var x = 0; x < width; x++) {
+    stroke(100, 100, 255);
+    for (var x = 0; x < width; x++) {
       if (x % step_col == 0 && y % step_row == 0) {
 
-        let noiseX = map(x, 0,width, 0,noiseXRange);
-        let noiseY = map(y, 0,height, 0,noiseYRange);
+        let noiseX = map(x, 0, width, 0, noiseXRange);
+        let noiseY = map(y, 0, height, 0, noiseYRange);
 
-        var noiseValue = noise(noiseX, c1+c);
-        curveVertex(x, y - noiseValue*200)
+        var noiseValue = noise(noiseX, c1 + c);
+        curveVertex(x, y - noiseValue * 200)
 
       }
     }
@@ -63,7 +63,7 @@ function draw() {
   }
 
 
-  
+
 }
 
 
@@ -75,9 +75,9 @@ function setPixelColor(x, y, r, g, b, a) {
       // loop over
       idx = 4 * ((y * d + j) * width * d + (x * d + i));
       pixels[idx] = r;
-      pixels[idx+1] = g;
-      pixels[idx+2] = b;
-      pixels[idx+3] = a;
+      pixels[idx + 1] = g;
+      pixels[idx + 2] = b;
+      pixels[idx + 3] = a;
     }
   }
 }

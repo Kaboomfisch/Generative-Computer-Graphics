@@ -3,7 +3,7 @@
 
 // Global var
 var b = 255, p = false;
- 
+
 function setup() {
   // Canvas setup
   canvas = createCanvas(windowWidth, windowHeight);
@@ -22,14 +22,14 @@ function draw() {
   smooth();
   noFill();
 
-if (p) {
-  
-  s = map(mouseY, 0, windowHeight, 0, 1000)
-  r = map(size, 0, windowHeight, 0, 255)
-  b = map(size, 0, windowHeight, 255, 0)
+  if (p) {
 
-    x = windowWidth/2
-    y = windowHeight/2
+    s = map(mouseY, 0, windowHeight, 0, 1000)
+    r = map(size, 0, windowHeight, 0, 255)
+    b = map(size, 0, windowHeight, 255, 0)
+
+    x = windowWidth / 2
+    y = windowHeight / 2
     diameter = 10
     size = s
     angle = 1
@@ -37,19 +37,19 @@ if (p) {
     oldY = y;
     beginShape();
     for (let i = 0; i < size; i++) {
-      newAngle = (angle/10) * i;
+      newAngle = (angle / 10) * i;
       newX = (x) + (diameter * newAngle) * Math.sin(newAngle);
       newY = (y) + (diameter * newAngle) * Math.cos(newAngle);
-      
-     // r = random(10);
-     // g = random(250);
-     // b = random(100);
-      
+
+      // r = random(10);
+      // g = random(250);
+      // b = random(100);
+
       let rColor = color(0, 200, 0);
       //drawCircle(newX, newY, 50, rColor);
       //drawPolygon(newX, newY, 100, 6);
       stroke(r, 0, b);
-     
+
       strokeWeight(60)
       line(oldX, oldY, newX, newY);
       oldX = newX;
@@ -119,6 +119,6 @@ function timestamp() {
 
 // Thumb
 function saveThumb(w, h) {
-  let img = get( width/2-w/2, height/2-h/2, w, h);
-  save(img,'thumb.jpg');
+  let img = get(width / 2 - w / 2, height / 2 - h / 2, w, h);
+  save(img, 'thumb.jpg');
 }

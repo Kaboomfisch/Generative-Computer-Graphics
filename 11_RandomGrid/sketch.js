@@ -59,7 +59,7 @@ function draw() {
       let posX = width / tileCount * gridX;
       let posY = width / tileCount * gridY;
 
-      
+
       push()
       stroke(0)
       strokeWeight(10)
@@ -68,19 +68,19 @@ function draw() {
       fill(random(colors))
       quad(0, 0, 0, width / tileCount, width / tileCount, width / tileCount, width / tileCount, 0)
 
-     
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
+
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
       fill(random(colors))
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
       fill(random(colors))
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
       fill(random(colors))
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
       fill(random(colors))
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
       fill(random(colors))
-      quad(random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex),random(vertex))
-     
+      quad(random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex), random(vertex))
+
       pop()
 
     }

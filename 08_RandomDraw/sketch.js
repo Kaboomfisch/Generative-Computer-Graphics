@@ -48,9 +48,9 @@ function draw() {
   smooth();
   stepSize = map(mouseX, 1, width, 1, 20);
   stepSize = 30;
-  timeColor1 = map(second(), 0,59,0,255)
-  timeColor2 = map(second(), 0,59,200,0)
-  timeColor4 = map(second(), 0,59,126,255)
+  timeColor1 = map(second(), 0, 59, 0, 255)
+  timeColor2 = map(second(), 0, 59, 200, 0)
+  timeColor4 = map(second(), 0, 59, 126, 255)
 
   // ------ draw dot at current position ------
   strokeWeight(0);
@@ -67,12 +67,12 @@ function draw() {
   if (posY <= 5) {
     direction = SOUTH;
     reachedBorder = true;
-  } 
-  else if (posX >= width-5) {
+  }
+  else if (posX >= width - 5) {
     direction = WEST;
     reachedBorder = true;
   }
-  else if (posY >= height-5) {
+  else if (posY >= height - 5) {
     direction = NORTH;
     reachedBorder = true;
   }
@@ -83,15 +83,15 @@ function draw() {
 
   // ------ if agent is crossing his path or border was reached ------
   loadPixels();
-  let pixelColors = get(toInt(posX),toInt(posY));
-  if ( brightness(color(pixelColors)) != brightness(color(100,100,201)) || reachedBorder) {
+  let pixelColors = get(toInt(posX), toInt(posY));
+  if (brightness(color(pixelColors)) != brightness(color(100, 100, 201)) || reachedBorder) {
     angle = getRandomAngle(direction);
     let distance = dist(posX, posY, posXcross, posYcross);
     if (distance >= minLength) {
       strokeWeight(40);
-      if (drawMode == 1) stroke(timeColor1,timeColor2,timeColor4);
-      if (drawMode == 2) stroke(52, 100, distance/dStroke);
-      if (drawMode == 3) stroke(192, 100, 64, distance/dStroke);
+      if (drawMode == 1) stroke(timeColor1, timeColor2, timeColor4);
+      if (drawMode == 2) stroke(52, 100, distance / dStroke);
+      if (drawMode == 3) stroke(192, 100, 64, distance / dStroke);
       line(posX, posY, posXcross, posYcross);
     }
     posXcross = posX;
@@ -101,7 +101,7 @@ function draw() {
 }
 
 function getRandomAngle(theDirection) {
-  let a = (floor(random(-angleCount, angleCount)) + 0.5) * 140.0/angleCount;
+  let a = (floor(random(-angleCount, angleCount)) + 0.5) * 140.0 / angleCount;
 
   if (theDirection == NORTH) return (a - 90);
   if (theDirection == EAST) return (a);
@@ -114,7 +114,7 @@ function getRandomAngle(theDirection) {
 
 
 function keyPressed() {
-  if (key == DELETE || key == BACKSPACE) background(360);  
+  if (key == DELETE || key == BACKSPACE) background(360);
   if (key == 's' || key == 'S') saveThumb(650, 350);
 
   if (key == '1') drawMode = 1;

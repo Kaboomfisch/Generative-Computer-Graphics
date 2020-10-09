@@ -3,7 +3,7 @@
 
 // Global var
 var b = 255, p = false;
- 
+
 function setup() {
   // Canvas setup
   canvas = createCanvas(windowWidth, windowHeight);
@@ -35,7 +35,7 @@ function draw() {
     var radius = r;
     var angle = TWO_PI / circleResolution;
 
-    
+
     stroke(r, g, b, 100);
     strokeWeight(20)
 
@@ -84,6 +84,6 @@ function timestamp() {
 
 // Thumb
 function saveThumb(w, h) {
-  let img = get( width/2-w/2, height/2-h/2, w, h);
-  save(img,'thumb.jpg');
+  let img = get(width / 2 - w / 2, height / 2 - h / 2, w, h);
+  save(img, 'thumb.jpg');
 }

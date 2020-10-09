@@ -3,7 +3,7 @@
 
 // Global var
 var b = 255, p = false;
- 
+
 function setup() {
   // Canvas setup
   canvas = createCanvas(windowWidth, windowHeight);
@@ -42,16 +42,16 @@ function draw() {
     fill(random(colors))
 
     corner = random(5, 9)
-    
+
 
     var circleResolution = toInt(map(400, 0, height, 3, corner));
-    var radius = random(100,220);
+    var radius = random(100, 220);
     var angle = TWO_PI / circleResolution;
 
-    
+
     stroke(0);
     strokeWeight(20)
-    
+
 
     beginShape();
     for (i = 0; i <= circleResolution; i++) {
@@ -59,7 +59,7 @@ function draw() {
       var y = 0 + sin(angle * i) * radius;
       vertex(x, y);
     }
-    
+
 
 
     endShape();
@@ -101,6 +101,6 @@ function timestamp() {
 
 // Thumb
 function saveThumb(w, h) {
-  let img = get( width/2-w/2, height/2-h/2, w, h);
-  save(img,'thumb.jpg');
+  let img = get(width / 2 - w / 2, height / 2 - h / 2, w, h);
+  save(img, 'thumb.jpg');
 }
